@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 
 import { useState, useEffect } from "react";
 
@@ -8,6 +8,10 @@ import Checkout from "./pages/Checkout";
 import ProductDetails from "./pages/ProductDetails";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
+
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 
 function App() {
 
