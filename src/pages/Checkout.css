@@ -1,0 +1,1290 @@
+/* ======================================
+   CHECKOUT
+   MAME FALLOU OPTIQUE
+====================================== */
+
+.checkout-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 50px 20px 80px;
+  color: #172033;
+}
+
+.checkout-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ======================================
+   HEADER
+====================================== */
+
+.checkout-header {
+  margin-bottom: 35px;
+}
+
+.checkout-back-link {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 25px;
+
+  color: #315b9b;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.checkout-back-link:hover {
+  text-decoration: underline;
+}
+
+.checkout-label {
+  margin: 0 0 8px;
+
+  color: #315b9b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.checkout-header h1 {
+  margin: 0 0 10px;
+
+  color: #101827;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.checkout-header > p:last-child {
+  margin: 0;
+
+  color: #697386;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ======================================
+   ERREUR
+====================================== */
+
+.checkout-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 25px;
+  padding: 15px 18px;
+
+  border: 1px solid #f0b7b7;
+  border-radius: 12px;
+
+  background: #fff1f1;
+  color: #a12828;
+}
+
+.checkout-error span {
+  font-size: 20px;
+}
+
+.checkout-error p {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ======================================
+   LAYOUT
+====================================== */
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.8fr);
+  gap: 25px;
+
+  align-items: start;
+}
+
+/* ======================================
+   CARTE PRINCIPALE
+====================================== */
+
+.checkout-card {
+  padding: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e9f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+/* ======================================
+   TITRE DES SECTIONS
+====================================== */
+
+.checkout-card-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  margin-bottom: 28px;
+}
+
+.checkout-number {
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  background: #315b9b;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.checkout-card-title h2 {
+  margin: 0 0 5px;
+
+  color: #172033;
+
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.checkout-card-title p {
+  margin: 0;
+
+  color: #7a8495;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ======================================
+   FORMULAIRE
+====================================== */
+
+.checkout-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.checkout-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkout-field-full {
+  grid-column: 1 / -1;
+}
+
+.checkout-field label {
+  color: #303a4d;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.checkout-field input,
+.checkout-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #dce2ea;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #172033;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkout-field input {
+  min-height: 50px;
+}
+
+.checkout-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.checkout-field input::placeholder,
+.checkout-field textarea::placeholder {
+  color: #a0a8b6;
+}
+
+.checkout-field input:focus,
+.checkout-field textarea:focus {
+  border-color: #315b9b;
+
+  box-shadow:
+    0 0 0 3px rgba(49, 91, 155, 0.1);
+}
+
+.checkout-field input:disabled,
+.checkout-field textarea:disabled {
+  background: #f4f6f8;
+  cursor: not-allowed;
+}
+
+/* ======================================
+   PAIEMENT
+====================================== */
+
+.checkout-payment-section {
+  margin-top: 38px;
+  padding-top: 32px;
+
+  border-top: 1px solid #e9edf2;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.payment-option {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-height: 76px;
+  padding: 14px 16px;
+
+  border: 1px solid #dce2ea;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.payment-option:hover {
+  border-color: #9ba9bc;
+}
+
+.payment-option.active {
+  border-color: #315b9b;
+  background: #f5f8fd;
+
+  box-shadow:
+    0 4px 14px rgba(49, 91, 155, 0.08);
+}
+
+.payment-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.payment-option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.wave-icon {
+  background: #edf5ff;
+  color: #315b9b;
+}
+
+.orange-icon {
+  background: #fff2e8;
+  color: #ed7900;
+}
+
+.payment-option-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.payment-option-info strong {
+  color: #172033;
+  font-size: 14px;
+}
+
+.payment-option-info span {
+  color: #7b8493;
+  font-size: 12px;
+}
+
+.payment-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  margin-left: auto;
+
+  border: 1px solid #ccd3dd;
+  border-radius: 50%;
+
+  color: transparent;
+  font-size: 11px;
+}
+
+.payment-option.active .payment-check {
+  border-color: #315b9b;
+
+  background: #315b9b;
+  color: white;
+}
+
+/* ======================================
+   BOUTON COMMANDER
+====================================== */
+
+.checkout-submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  width: 100%;
+  min-height: 56px;
+
+  margin-top: 30px;
+  padding: 15px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #172033;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkout-submit-button:hover:not(:disabled) {
+  background: #0f1728;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(23, 32, 51, 0.18);
+}
+
+.checkout-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ======================================
+   SPINNER
+====================================== */
+
+.checkout-spinner {
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: checkout-spin 0.7s linear infinite;
+}
+
+@keyframes checkout-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ======================================
+   RÉSUMÉ
+====================================== */
+
+.checkout-summary {
+  position: sticky;
+  top: 25px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e9f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.summary-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 24px;
+
+  border-bottom: 1px solid #e9edf2;
+}
+
+.summary-header h2 {
+  margin: 0 0 4px;
+
+  color: #172033;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.summary-header p {
+  margin: 0;
+
+  color: #8992a0;
+
+  font-size: 12px;
+}
+
+.summary-header > span {
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  background: #f0f3f7;
+  color: #5d6878;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* ======================================
+   PRODUITS
+====================================== */
+
+.summary-products {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-product {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
+  gap: 12px;
+
+  padding: 17px 20px;
+
+  border-bottom: 1px solid #eef1f4;
+}
+
+.summary-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #f5f6f8;
+}
+
+.summary-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.summary-image span {
+  font-size: 25px;
+}
+
+.summary-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+  gap: 4px;
+}
+
+.summary-product-info strong {
+  overflow: hidden;
+
+  color: #263044;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summary-product-info span {
+  color: #7b8493;
+
+  font-size: 11px;
+}
+
+.summary-product-info small {
+  color: #9aa2af;
+
+  font-size: 10px;
+}
+
+.summary-subtotal {
+  align-self: center;
+
+  color: #172033;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+/* ======================================
+   TOTAL
+====================================== */
+
+.summary-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 22px 24px;
+
+  background: #f8f9fb;
+}
+
+.summary-total span {
+  color: #626d7d;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.summary-total strong {
+  color: #172033;
+
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* ======================================
+   SÉCURITÉ
+====================================== */
+
+.summary-security {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  padding: 18px 20px;
+
+  background: #fbfcfd;
+}
+
+.summary-security span {
+  font-size: 17px;
+}
+
+.summary-security p {
+  margin: 0;
+
+  color: #8992a0;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ======================================
+   PAGE SUCCÈS
+====================================== */
+
+.checkout-success {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 20px auto 0;
+  padding: 45px 40px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e9f0;
+  border-radius: 22px;
+
+  box-shadow:
+    0 12px 40px rgba(15, 23, 42, 0.07);
+}
+
+.success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #eaf8ef;
+  color: #218c4b;
+
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.success-label {
+  margin: 0 0 8px;
+
+  color: #218c4b;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.checkout-success h1 {
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-size: 32px;
+  font-weight: 850;
+}
+
+.success-message {
+  max-width: 480px;
+
+  margin: 0 auto 25px;
+
+  color: #737e8e;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ======================================
+   NUMÉRO COMMANDE
+====================================== */
+
+.success-order-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  max-width: 450px;
+
+  margin: 0 auto 22px;
+  padding: 15px 18px;
+
+  border: 1px solid #e3e8ee;
+  border-radius: 12px;
+
+  background: #f8f9fb;
+
+  text-align: left;
+}
+
+.success-order-number span {
+  color: #7c8796;
+
+  font-size: 12px;
+}
+
+.success-order-number strong {
+  color: #172033;
+
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* ======================================
+   BOX PAIEMENT
+====================================== */
+
+.payment-box {
+  max-width: 500px;
+
+  margin: 0 auto 22px;
+  padding: 22px;
+
+  border: 1px solid #e1e7ef;
+  border-radius: 16px;
+
+  background: #f8fafc;
+
+  text-align: left;
+}
+
+.payment-box-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  margin-bottom: 20px;
+}
+
+.payment-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+
+  background: #eaf0fa;
+
+  font-size: 19px;
+}
+
+.payment-box-header h3 {
+  margin: 0 0 4px;
+
+  color: #172033;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.payment-box-header p {
+  margin: 0;
+
+  color: #7b8492;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid #e1e6ec;
+}
+
+.payment-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #e1e6ec;
+}
+
+.payment-detail span {
+  color: #7b8492;
+
+  font-size: 12px;
+}
+
+.payment-detail strong {
+  color: #172033;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.payment-number {
+  font-size: 16px !important;
+  letter-spacing: 1px;
+}
+
+.payment-total {
+  border-bottom: none;
+}
+
+.payment-total strong {
+  font-size: 17px;
+}
+
+.payment-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  margin-top: 15px;
+  padding: 12px;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+}
+
+.payment-note span {
+  font-size: 15px;
+}
+
+.payment-note p {
+  margin: 0;
+
+  color: #727d8d;
+
+  font-size: 11px;
+  line-height: 1.55;
+
+  text-align: left;
+}
+
+/* ======================================
+   WHATSAPP
+====================================== */
+
+.whatsapp-section {
+  max-width: 500px;
+
+  margin: 0 auto 18px;
+  padding: 20px;
+
+  border: 1px solid #dcefe3;
+  border-radius: 16px;
+
+  background: #f5fbf7;
+}
+
+.whatsapp-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-bottom: 15px;
+
+  text-align: left;
+}
+
+.whatsapp-title > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+
+  background: #dff7e7;
+
+  font-size: 19px;
+}
+
+.whatsapp-title h3 {
+  margin: 0 0 4px;
+
+  color: #173625;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.whatsapp-title p {
+  margin: 0;
+
+  color: #698072;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.whatsapp-order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 52px;
+
+  padding: 14px 18px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #25d366;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.whatsapp-order-button:hover {
+  background: #1ebe5d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(37, 211, 102, 0.22);
+}
+
+.whatsapp-order-button:active {
+  transform: translateY(0);
+}
+
+.whatsapp-button-icon {
+  font-size: 19px;
+}
+
+/* ======================================
+   RETOUR
+====================================== */
+
+.checkout-back-button {
+  display: block;
+
+  width: 100%;
+  max-width: 500px;
+
+  min-height: 50px;
+
+  margin: 0 auto;
+
+  padding: 13px 18px;
+
+  border: 1px solid #d9dfe7;
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: #354052;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.checkout-back-button:hover {
+  background: #f6f8fa;
+  border-color: #bfc7d2;
+}
+
+/* ======================================
+   RESPONSIVE TABLETTE
+====================================== */
+
+@media (max-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-summary {
+    position: static;
+  }
+
+  .checkout-summary {
+    order: -1;
+  }
+}
+
+/* ======================================
+   RESPONSIVE MOBILE
+====================================== */
+
+@media (max-width: 650px) {
+  .checkout-page {
+    padding: 25px 12px 50px;
+  }
+
+  .checkout-header {
+    margin-bottom: 25px;
+  }
+
+  .checkout-header h1 {
+    font-size: 30px;
+  }
+
+  .checkout-card {
+    padding: 22px 18px;
+    border-radius: 15px;
+  }
+
+  .checkout-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-field-full {
+    grid-column: auto;
+  }
+
+  .payment-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-header {
+    padding: 18px;
+  }
+
+  .summary-product {
+    grid-template-columns: 55px minmax(0, 1fr);
+  }
+
+  .summary-image {
+    width: 55px;
+    height: 55px;
+  }
+
+  .summary-subtotal {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: -4px;
+  }
+
+  .checkout-success {
+    margin-top: 5px;
+    padding: 32px 18px;
+    border-radius: 17px;
+  }
+
+  .checkout-success h1 {
+    font-size: 27px;
+  }
+
+  .success-order-number {
+    padding: 13px 14px;
+  }
+
+  .payment-box {
+    padding: 17px;
+  }
+
+  .payment-detail {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .payment-total {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .whatsapp-section {
+    padding: 16px;
+  }
+}
+
+/* ======================================
+   PETIT MOBILE
+====================================== */
+
+@media (max-width: 400px) {
+  .checkout-page {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .checkout-card {
+    padding: 18px 14px;
+  }
+
+  .checkout-header h1 {
+    font-size: 27px;
+  }
+
+  .checkout-card-title h2 {
+    font-size: 18px;
+  }
+
+  .checkout-submit-button {
+    font-size: 13px;
+  }
+
+  .summary-product {
+    padding: 14px;
+  }
+
+  .checkout-success {
+    padding: 28px 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ======================================
+   BOUTON WHATSAPP
+====================================== */
+
+.whatsapp-order-button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 22px;
+
+  background: #25D366;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.25);
+}
+
+.whatsapp-order-button:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-order-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+/* ======================================
+   BOUTONS APRÈS COMMANDE
+====================================== */
+
+.success-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* ======================================
+   RETOUR À LA BOUTIQUE
+====================================== */
+
+.checkout-back-button {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  padding: 14px 22px;
+
+  background: #ffffff;
+  color: #222222;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.checkout-back-button:hover {
+  background: #f7f7f7;
+  border-color: #bdbdbd;
+  transform: translateY(-1px);
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+
+  .whatsapp-order-button {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  .checkout-back-button {
+    font-size: 14px;
+    padding: 13px 16px;
+  }
+
+  .success-actions {
+    margin-top: 20px;
+  }
+}
