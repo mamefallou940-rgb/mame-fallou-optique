@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 import Navbar from "./components/Navbar";
-import Cart from "./pages/Cart";
+import Cart from "./pages/cart";
 import Checkout from "./pages/Checkout";
 import ProductDetails from "./pages/ProductDetails";
 import Admin from "./pages/Admin";
